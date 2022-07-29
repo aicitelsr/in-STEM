@@ -8,7 +8,8 @@ const vagaSchema = mongoose.Schema({
     autorPostagem: { type: String, default: 'Não informado' },
     descriçãoVaga: { type: String, required: true },
     requisitos: { type: String, required: true },
-    dataDePostagem: { type: Date }, vagaDisponível: { type: Boolean },
+    dataDePostagem: { type: Date }, 
+    vagaDisponível: { type: Boolean },
 
     // empresa: {
     //     type: mongoose.Schema.Types.ObjectId,
