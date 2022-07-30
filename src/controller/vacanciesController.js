@@ -197,7 +197,7 @@ const deleteVacancy = async (req, res) => {
             }
             const { id } = req.params
             const deletedVacancy = await VacancyModel.findByIdAndDelete(id)
-            const message = `A vaga ${deletedVacancy.tituloVaga} foi deletada com sucesso`
+            const message = `A vaga ${deletedVacancy.tituloVaga}} foi deletada com sucesso`
             res.status(200).json({ message })
         })
     } catch (error) {
