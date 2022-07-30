@@ -17,7 +17,7 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
  - Somente pessoas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir vagas
  - Somentes pessoas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir cursos
 
- ### rotas
+ ## ROTAS
 #### CURSOS
 
  | MÉTODO | ROTA|         | 
