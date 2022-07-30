@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const vagaSchema = mongoose.Schema({
+const vacancySchema = mongoose.Schema({
     
     _id: { type: mongoose.Schema.Types.ObjectId, default: mongoose.Types.ObjectId },
     categoria: { type: String, required: true },
@@ -11,14 +11,9 @@ const vagaSchema = mongoose.Schema({
     dataDePostagem: { type: Date }, 
     vagaDisponível: { type: Boolean },
 
-    // empresa: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     required: false,
-    //     ref: ''
-    //    }
 
 }, { timestamps: true })
 
-const Model = mongoose.model('vagas', vagaSchema)
+const Model = mongoose.model('vacancies', vacancySchema)
 
 module.exports = Model

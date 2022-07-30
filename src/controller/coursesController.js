@@ -1,8 +1,8 @@
-const CursoModel = require('../models/cursosModel')
+const CourseModel = require('../models/CoursesModel')
 const jwt = require('jsonwebtoken')
 const SECRET = `${process.env.SECRET}`
 
-const getAllCursos = async (req, res) => {
+const getAllCourses = async (req, res) => {
     try {
 
         const authHeader = req.get('authorization')
@@ -19,8 +19,8 @@ const getAllCursos = async (req, res) => {
                 return res.status(403).send('Enter a valid token!')
             }
 
-            const allCursos = await CursoModel.find()
-            res.status(200).json(allCursos)
+            const allCourses = await CourseModel.find()
+            res.status(200).json(allCourses)
         })
 
     } catch (error) {
@@ -29,7 +29,7 @@ const getAllCursos = async (req, res) => {
     }
 }
 
-const getCursoById = async (req, res) => {
+const getCourseById = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -45,8 +45,8 @@ const getCursoById = async (req, res) => {
             }
 
             const { id } = req.params
-            const findCurso = await CursoModel.findById(id)
-            res.status(200).json(findCurso)
+            const findCourse = await CourseModel.findById(id)
+            res.status(200).json(findCourse)
         })
 
     } catch (error) {
@@ -55,23 +55,23 @@ const getCursoById = async (req, res) => {
     }
 }
 
-const getCursoByCategory = async (req, res) => {
+const getCourseByCategory = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
         if (!authHeader) {
-            return res.status(401).send('Informe um token.')
+            return res.status(401).send('Pass the token.')
         }
         const token = authHeader.split(' ')[1]
 
         await jwt.verify(token, SECRET, async function (err) {
             if (err) {
-                return res.status(403).send('Informe um token váilido.')
+                return res.status(403).send('Enter a valid token.')
             }
             const { categoria } = req.query;
 
-            const findCurso = await CursoModel.find({ categoria: categoria });
-            res.status(200).json(findCurso)
+            const findCourse = await CourseModel.find({ categoria: categoria });
+            res.status(200).json(findCourse)
         })
 
     } catch (error) {
@@ -80,7 +80,7 @@ const getCursoByCategory = async (req, res) => {
     }
 }
 
-const createCurso = async (req, res) => {
+const createCourse = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -97,11 +97,11 @@ const createCurso = async (req, res) => {
 
             const { tituloCurso, categoria, autorPostagem, descrição, inscriçõesAbertas, inscriçõesEncerradas, infosAdicionais } = req.body
 
-            const newCurso = new CursoModel({
+            const newCourse = new CourseModel({
                 tituloCurso, categoria, autorPostagem, descrição, inscriçõesAbertas, inscriçõesEncerradas, infosAdicionais
             })
     
-            const savedCurso = await newCurso.save()
+            const savedCurso = await newCourse.save()
     
             res.status(201).json(savedCurso)
         })
@@ -112,7 +112,7 @@ const createCurso = async (req, res) => {
     }
 }
 
-const updateCurso = async (req, res) => {
+const updateCourse = async (req, res) => {
     try {
 const authHeader = req.get('authorization')
 
@@ -129,7 +129,7 @@ await jwt.verify(token, SECRET, async function (err) {
 
     const { tituloCurso, categoria, autorPostagem, descrição, inscriçõesAbertas, inscriçõesEncerradas, infosAdicionais } = req.body
 
-        const updatingCurso = await CursoModel.
+        const updatingCurso = await CourseModel.
             findByIdAndUpdate(req.params.id, {
                 tituloCurso,
                 categoria,
@@ -140,8 +140,8 @@ await jwt.verify(token, SECRET, async function (err) {
                 infosAdicionais
             })
 
-        const cursoUpdated = await CursoModel.findById(req.params.id)
-        res.status(200).json(cursoUpdated)
+        const courseUpdated = await CourseModel.findById(req.params.id)
+        res.status(200).json(courseUpdated)
 })
         
     } catch (error) {
@@ -150,7 +150,7 @@ await jwt.verify(token, SECRET, async function (err) {
     }
 }
 
-const deleteCurso = async (req, res) => {
+const deleteCourse = async (req, res) => {
     try {
 const authHeader = req.get('authorization')
 
@@ -167,7 +167,7 @@ await jwt.verify(token, SECRET, async function (err) {
     }
 
     const { id } = req.params
-    const deletedCurso = await CursoModel.findByIdAndDelete(id)
+    const deletedCurso = await CourseModel.findByIdAndDelete(id)
     const message = `O curso com o nome ${deletedCurso.tituloCurso} foi deletado com sucesso`
     res.status(200).json({ message })
 })
@@ -178,7 +178,7 @@ await jwt.verify(token, SECRET, async function (err) {
     }
 }
 
-const getCursosAbertos = async (req, res) => {
+const openCourses = async (req, res) => {
 
     try {
 
@@ -198,8 +198,8 @@ const getCursosAbertos = async (req, res) => {
             
             const { inscriçõesAbertas } = req.query
 
-            const findCurso = await CursoModel.find({ inscriçõesAbertas: inscriçõesAbertas });
-            res.status(200).json(findCurso)
+            const findCourse = await CourseModel.find({ inscriçõesAbertas: inscriçõesAbertas });
+            res.status(200).json(findCourse)
         })
 
     } catch (error) {
@@ -211,11 +211,11 @@ const getCursosAbertos = async (req, res) => {
 
 module.exports =
 {
-    getAllCursos,
-    getCursoById,
-    getCursoByCategory,
-    createCurso,
-    updateCurso,
-    deleteCurso,
-    getCursosAbertos
+    getAllCourses,
+    getCourseById,
+    getCourseByCategory,
+    createCourse,
+    updateCourse,
+    deleteCourse,
+    openCourses
 }

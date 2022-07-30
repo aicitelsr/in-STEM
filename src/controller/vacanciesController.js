@@ -1,8 +1,8 @@
-const VagaModel = require('../models/vagasModel')
+const VacancyModel = require('../models/vacancyModel')
 const jwt = require('jsonwebtoken')
 const SECRET = `${process.env.SECRET}`
 
-const createVaga = async (req, res) => {
+const createVacancy = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -19,7 +19,7 @@ const createVaga = async (req, res) => {
 
             const { categoria, tituloVaga, autorPostagem, descriçãoVaga, requisitos, dataDepostagem, vagaDisponível } = req.body
 
-            const newVaga = new VagaModel({
+            const newVacancy = new VacancyModel({
 
                 categoria,
                 tituloVaga,
@@ -30,9 +30,9 @@ const createVaga = async (req, res) => {
                 vagaDisponível
             })
 
-            const savedVaga = await newVaga.save()
+            const savedVacancy = await newVacancy.save()
 
-            res.status(201).json(savedVaga)
+            res.status(201).json(savedVacancy)
         })
 
     } catch (error) {
@@ -42,7 +42,7 @@ const createVaga = async (req, res) => {
 }
 
 
-const getAllVagas = async (req, res) => {
+const getAllJobs = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -58,8 +58,8 @@ const getAllVagas = async (req, res) => {
                 return res.status(403).send('Enter a valid token!')
             }
 
-            const allVagas = await VagaModel.find()
-            res.status(200).json(allVagas)
+            const allJobs = await VacancyModel.find()
+            res.status(200).json(allJobs)
         })
     } catch (error) {
         console.error(error)
@@ -67,8 +67,7 @@ const getAllVagas = async (req, res) => {
     }
 }
 
-//get vaga por {id} | vaga específica
-const getVagaById = async (req, res) => {
+const getVacancyById = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -83,8 +82,8 @@ const getVagaById = async (req, res) => {
                 return res.status(403).send('Enter a valid token!')
             }
 
-            findVaga = await VagaModel.findById(req.params.id)
-            res.status(200).json(findVaga)
+            findVacancy = await VacancyModel.findById(req.params.id)
+            res.status(200).json(findVacancy)
 
         })
     } catch (error) {
@@ -93,7 +92,7 @@ const getVagaById = async (req, res) => {
     }
 }
 
-const getVagaByCategory = async (req, res) => {
+const getVacancyByCategory = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -109,8 +108,8 @@ const getVagaByCategory = async (req, res) => {
             }
             const { categoria } = req.query
 
-            const findCurso = await VagaModel.find({ categoria: categoria })
-            res.status(200).json(findCurso)
+            const findVacancy = await VacancyModel.find({ categoria: categoria })
+            res.status(200).json(findVacancy)
         })
 
     } catch (error) {
@@ -119,7 +118,7 @@ const getVagaByCategory = async (req, res) => {
     }
 }
 
-const getVagaByDisponibilidade = async (req, res) => {
+const getvacancyAvailable = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -135,8 +134,8 @@ const getVagaByDisponibilidade = async (req, res) => {
             }
             const { vagaDisponível } = req.query
 
-            const findVaga = await VagaModel.find({ vagaDisponível: vagaDisponível })
-            res.status(200).json(findVaga)
+            const findVacancy = await VacancyModel.find({ vagaDisponível: vagaDisponível })
+            res.status(200).json(findVacancy)
         })
 
     } catch (error) {
@@ -145,7 +144,7 @@ const getVagaByDisponibilidade = async (req, res) => {
     }
 }
 
-const updateVaga = async (req, res) => {
+const updateVacancy = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -161,7 +160,7 @@ const updateVaga = async (req, res) => {
             }
             const { categoria, tituloVaga, autorPostagem, descriçãoVaga, requisitos, dataDepostagem, vagaDisponível } = req.body
 
-            const updatingVaga = await VagaModel
+            const updatingVaga = await VacancyModel
                 .findByIdAndUpdate(req.params.id, {
                     categoria,
                     tituloVaga,
@@ -172,8 +171,8 @@ const updateVaga = async (req, res) => {
                     vagaDisponível
                 })
 
-            const vagaUpdated = await VagaModel.findById(req.params.id)
-            res.status(200).json(vagaUpdated)
+            const updatedVacancy = await VacancyModel.findById(req.params.id)
+            res.status(200).json(updatedVacancy)
         })
 
     } catch (error) {
@@ -182,7 +181,7 @@ const updateVaga = async (req, res) => {
     }
 }
 
-const deleteVaga = async (req, res) => {
+const deleteVacancy = async (req, res) => {
     try {
         const authHeader = req.get('authorization')
 
@@ -197,7 +196,7 @@ const deleteVaga = async (req, res) => {
                 return res.status(403).send('Enter a valid token')
             }
             const { id } = req.params
-            const deletedVaga = await VagaModel.findByIdAndDelete(id)
+            const deletedVacancy = await VacancyModel.findByIdAndDelete(id)
             const message = `A vaga ${deletedVaga.tituloVaga} foi deletada com sucesso`
             res.status(200).json({ message })
         })
@@ -207,13 +206,13 @@ const deleteVaga = async (req, res) => {
 }
 
 module.exports = {
-    getAllVagas,
-    getVagaById,
-    getVagaByCategory,
-    createVaga,
-    getVagaByDisponibilidade,
-    updateVaga,
-    deleteVaga
+    getAllJobs,
+    getVacancyById,
+    getVacancyByCategory,
+    createVacancy,
+    getvacancyAvailable,
+    updateVacancy,
+    deleteVacancy
 }
 
 
