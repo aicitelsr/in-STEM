@@ -72,7 +72,7 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
 - [x] Heroku
 - [x] Git
 
-### Documentação
+## Documentação
 
 > A documentação pode ser acessada [aqui](https://in-stem.herokuapp.com/minha-rota-de-documentacao)
 
