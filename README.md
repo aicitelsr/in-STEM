@@ -1,10 +1,10 @@
 <h2 align="center">
-  <p align="center"> inSteam  <p>
+  <p align="center"> in-STEM  <p>
 </h2>
 
 
 <h4 align="center">
-  <p align="center"> Projeto final da {reprograma}. <p align="center">  O inSteam possui a finalidade de propagar a capacitação e
+  <p align="center"> Projeto final da {reprograma}. <p align="center">  O in-STEM possui a finalidade de propagar a capacitação e
   a inserção de mais mulheres nas áreas de STEM.<p>
 </h4>
 
