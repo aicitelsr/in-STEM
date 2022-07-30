@@ -1,7 +1,7 @@
 {
-  "name": "woisteam",
+  "name": "inSTEAM",
   "version": "1.0.0",
-  "description": "",
+  "description": "projeto final",
   "main": "server.js",
   "scripts": {
     "test:watch": "jest --watchAll",
