@@ -8,7 +8,7 @@
   a inserção de mais mulheres nas áreas de STEAM.<p>
 </h4>
 
-<img src="img/inSteam.png" alt="women together" width ="480" align="center" padding="left"/>
+<img src="img/img.png" alt="women together" width ="410" align="right" padding="200"/>
 
 
 ## contexto | objetivo
