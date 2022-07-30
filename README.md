@@ -60,19 +60,19 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
 
 ## tecnologias utilizadas
 
-- [x] Node.js
-- [x] MongoDB Atlas
-- [x] express
-- [x] mongoose
-- [x] dotenv
-- [x] bcrypt
-- [x] jsonwebtoken
-- [x] cors
-- [x] swagger
-- [x] eslint
-- [x] Jest
-- [x] Heroku
-- [x] Git
+- [ ] Node.js
+- [ ] MongoDB Atlas
+- [ ] express
+- [ ] mongoose
+- [ ] dotenv
+- [ ] bcrypt
+- [ ] jsonwebtoken
+- [ ] cors
+- [ ] swagger
+- [ ] eslint
+- [ ] Jest
+- [ ] Heroku
+- [ ] Git
 
 ## Documentação
 
