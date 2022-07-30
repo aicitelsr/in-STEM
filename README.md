@@ -5,7 +5,7 @@
 
 <h4 align="center">
   <p align="center"> Projeto final da {reprograma}. <p align="center">  O inSteam possui a finalidade de propagar a capacitação e
-  a inserção de mais mulheres nas áreas de STEAM.<p>
+  a inserção de mais mulheres nas áreas de STEM.<p>
 </h4>
 
 <img src="img/img.png" alt="women together" width ="410" align="right" padding="200"/>
