@@ -5,6 +5,7 @@ const mongoose = require('./database/mongooseConnect')
 const coursesRoutes = require('./routes/coursesRoutes')
 const vacanciesRoutes = require('./routes/vacanciesRoutes')
 const adminRoutes = require('./routes/adminRoutes')
+const index = require('./routes/index')
 const swaggerUi = require('swagger-ui-express');
 
 const swaggerFile = require('../swagger/swagger_output.json');
@@ -17,6 +18,7 @@ app.use(cors())
 
 mongoose.connect()
 
+app.use('/', index)
 app.use(coursesRoutes)
 app.use(vacanciesRoutes)
 app.use(adminRoutes)
