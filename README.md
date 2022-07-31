@@ -1,5 +1,5 @@
 <h1 align="center">
-  <p align="center"> in-STEM  <p>
+  <p align="center"> in-STEM 	:woman_scientist: :woman_technologist: :construction_worker_woman: <p>
 </h2>
 
 
@@ -19,7 +19,7 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
  - Somente usuárias autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir vagas
  - Somentes empresas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir cursos
 
- ## ROTAS :globe_with_meridians:
+ ## ROTAS
 #### CURSOS
 
  | MÉTODO | ROTA|                                                           | 
