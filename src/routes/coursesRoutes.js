@@ -4,7 +4,7 @@ const controller = require('../controller/coursesController')
 
 const router = express.Router()
 
-router.get('/cursos/buscar', controller.getAllCourses)
+router.get('/cursos/buscar/categoria', controller.getCourseByCategory)
 router.get('/cursos/buscar/abertos', controller.openCourses)
 router.get('/cursos', controller.getAllCourses)
 router.get('/cursos/:id', controller.getCourseById)
