@@ -16,8 +16,8 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
 
 ### funcionamento:
  - Empresas e usuárias poderão se cadastrar e postar vagas de emprego e cursos.
- - Somente pessoas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir vagas
- - Somentes pessoas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir cursos
+ - Somente usuárias autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir vagas
+ - Somentes empresas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir cursos
 
  ## ROTAS
 #### CURSOS
