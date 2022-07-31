@@ -12,7 +12,7 @@
 
 
 ## contexto | objetivo
-A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o número de pesquisadoras é de 30%, além disso, é possível observar a persistência de barreiras e baixa representatividade em áreas como matemática, ciência, engenharia e tecnologia. Essas últimas palavras constituem nada menos que a palavra STEM em inglês. Estima-se que apenas uma mulher para cada quatro homens, consiga um emprego na área de STEM e isso se dá por causa de fatores sociais, ausência de informação e sexismo. Visando mudar esse cenário, é necessário projetos e iniciativas que visem promover uma maior diversificação nesses campos. Com isso em mente, o inSteam foi criado como uma API que se conecta à um banco de dados sendo possível a postagem de vagas e cursos relacionados.
+A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o número de pesquisadoras é de 30%, além disso, é possível observar a persistência de barreiras e baixa representatividade em áreas como **matemática, ciência, engenharia e tecnologia**. Essas últimas palavras constituem nada menos que a palavra ***STEM*** em inglês. Estima-se que apenas uma mulher para cada quatro homens, consiga um emprego na área de STEM e isso se dá por causa de fatores sociais, ausência de informação e sexismo. Visando mudar esse cenário, é necessário projetos e iniciativas que visem promover uma maior diversificação nesses campos. Com isso em mente, o inSteam foi criado como uma API que se conecta à um banco de dados sendo possível a postagem de vagas e cursos relacionados.
 
 ### funcionamento:
  - Empresas e usuárias poderão se cadastrar e postar vagas de emprego e cursos.
