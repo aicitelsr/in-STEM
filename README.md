@@ -1,9 +1,9 @@
-<h2 align="center">
+<h1 align="center">
   <p align="center"> in-STEM  <p>
 </h2>
 
 
-<h4 align="center">
+<h3 align="center">
   <p align="center"> Projeto final da {reprograma}. <p align="center">  O in-STEM possui a finalidade de propagar a capacitação e
   a inserção de mais mulheres nas áreas de STEM.<p>
 </h4>
@@ -19,44 +19,41 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
  - Somente usuárias autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir vagas
  - Somentes empresas autenticadas e autorizadas poderão visualizar, criar, atualizar e excluir cursos
 
- ## ROTAS
+ ## ROTAS :globe_with_meridians:
 #### CURSOS
 
- | MÉTODO | ROTA|         | 
- ---------|---------------|---------------------------|
-|GET      | /cursos       | retorna todos os cursos   |
+ | MÉTODO | ROTA|                                                           | 
+ ---------|---------------|--------------------------------------|
+|GET      | /cursos       | retorna todos os cursos              |
 |GET      | /cursos/:id   | retorna curso pelo id
-|GET      | /cursos/buscar
+|GET      | /cursos/buscar/categoria | retorna cursos por categoria |
 |GET      | /cursos/buscar/abertos| retorna cursos com inscrições abertas|
-|GET      | /users        | retorna cadastrados       |
-|POST     | /cursos       | cadastra um novo curso     |
-|POST     | /login        | login
-|POST     | /register     | cadastro             |
-|PATCH    | /curso/:id    | altera um curso            |
-|DELETE   |/curso/:id      | exclui um curso     |
-|DELETE   |/user/:id       | exclui um cadastro  |
+|POST     | /cursos       | cadastra um novo curso               |
+|PATCH    | /curso/:id    | altera um curso                      |
+|DELETE   |/curso/:id      | exclui um curso específico                |
+ |
 
 
 #### VAGAS
 
- | MÉTODO | ROTA|         | 
+ | MÉTODO | ROTA|                                     | 
  ---------|---------------|---------------------------|
 |GET      | /vagas        | retorna todas as vagas    |
-|GET      | /vaga/:id     | retorna vaga pelo id      |
-|GET      | /vaga/buscar/area| retorna vagas por área  |
+|GET      | /vaga/:id     | retorna vaga pelo id            |
+|GET      | /vaga/buscar/area| retorna vagas por categoria  |
 |GET      | /vaga/buscar/disponibilidade| retorna vagas disponíveis |
-|POST     | /vaga         | cadastra nova vaga       |
-|PATCH    | /vaga/:id     | altera dados da vaga     |
-|DELETE   | /vaga/:id     | exclui uma vaga          |
+|POST     | /vaga         | cadastra nova vaga              |
+|PATCH    | /vaga/:id     | altera dados de uma vaga        |
+|DELETE   | /vaga/:id     | exclui uma vaga                 |
 
 #### USERS
 
  | MÉTODO | ROTA|         | 
- ---------|---------------|---------------------------|
-|POST     | /register     | cadastra novo user        |
-|POST     | /login        | login                     |
-|GET      | /users        | retorna users cadastrados |
-|DELETE   | /user/:id     | excluir um user cadastrado|
+ ---------|---------------|---------------------------------|
+|POST     | /register     | cadastra novo user              |
+|POST     | /login        | login                           |
+|GET      | /users        | retorna todos users cadastrados |
+|DELETE   | /user/:id     | excluir um user cadastrado      |
 
 ## tecnologias utilizadas
 
@@ -74,12 +71,14 @@ A UNESCO E A ONU apresentaram dados que mostram que em áreas como ciência, o n
 - [ ] Heroku
 - [ ] Git
 
+
 ## Documentação
 
-> A documentação pode ser acessada [aqui](https://in-stem.herokuapp.com/minha-rota-de-documentacao)
+ A documentação pode ser acessada [aqui](https://in-stem.herokuapp.com/minha-rota-de-documentacao)
 
+----------------------------
 
-
+A aplicação está disponível [aqui](https://in-stem.herokuapp.com/)
 
 
 <p align="center">
